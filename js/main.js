@@ -30,14 +30,14 @@ function getMovies(response) {
     response.forEach(i => {
         let listElement = document.createElement('div');
         let link = document.createElement('a');
-        let sinopsis = document.createElement('p');
+        let likes = document.createElement('p');
 
         link.innerText = i.title;
         link.href = `movies/${i.id}`;
-        sinopsis.innerText = i.sinopsis;
+        likes.innerText = `Número de likes: ${i.likes}`;
 
         listElement.appendChild(link);
-        listElement.appendChild(sinopsis);
+        listElement.appendChild(likes);
         listGroup.appendChild(listElement);
     })
 }
